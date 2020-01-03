@@ -1,0 +1,35 @@
+h1 Hello #{name} 
+a(href="/users") User List
+br
+- // attribute
+input(type= "email" name="Email") 
+button(style = "color: red;") Button
+
+- //case switch
+- var friends = 10;
+case friends
+    when 0: p Hieu dep trai
+    when 1: p Hieu van dep trai
+    default: p Toi la vu thanh hieu toi co #{friends} ban
+
+- // code
+mixin listNumber
+    ul(style="border: 1px solid red")
+        - for (var i= 0; i< 5; i++)
+            li index #{i}
+
++listNumber
++listNumber
+
+-        
+  var list = ["Uno", "Dos", "Tres",
+          "Cuatro", "Cinco", "Seis"]
+mixin listName
+    ul(style="border: 1px solid green")
+        each item in list
+            li= item
+
++listName
++listName
+
+p!= 'This code is <span style="color:"red">not</span> ecapted'    
