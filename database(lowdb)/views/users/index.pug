@@ -1,0 +1,16 @@
+h1(style= "color: red") Hello world
+a(href="/users/create") new
+form(action="/users/search" method="GET")
+    input(type="text" name="q" id="search")
+    input(type="submit")
+
+ul 
+    each user in users
+        li
+            span= user.name
+            span &nbsp 
+            a(href="/users/" + user.id) 
+                span view
+
+script 
+    include effective.js
